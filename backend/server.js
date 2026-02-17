@@ -3,6 +3,8 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import cors from 'cors';
 
+import AuthRoutes from './routes/Auth.routes.js';
+
 const app = express();
 
 dotenv.config({
@@ -33,3 +35,5 @@ mongoose
 //start server
 //load dotenv
 //add cors
+
+app.use("/auth", AuthRoutes);
